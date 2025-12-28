@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chidwilash Chidwilash</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom animations */
+        .fade-in {
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .slide-up {
+            animation: slideUp 1s;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#050505] text-white">
+    <div class="max-w-5xl mx-auto px-6 pt-12">
+        <header class="fade-in">
+            <h1 class="text-5xl font-bold mb-4">Building the digital future.</h1>
+            <p class="text-lg mb-8">A professional intro based on Bio.</p>
+            <div class="flex gap-4">
+                <button class="bg-white text-black px-6 py-3 rounded-full hover:scale-[1.02] transition-all duration-300">View Projects</button>
+                <button class="border border-white/10 px-6 py-3 rounded-full hover:scale-[1.02] transition-all duration-300">Contact</button>
+            </div>
+        </header>
+        <section class="mt-12 fade-in">
+            <h2 class="text-3xl font-bold mb-4">About</h2>
+            <p class="text-lg mb-8">A professional story based on Bio.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#111] border border-white/10 rounded-2xl p-6">
+                    <h3 class="text-xl font-bold mb-2">Core Value 1</h3>
+                    <p class="text-lg">Description of core value 1.</p>
+                </div>
+                <div class="bg-[#111] border border-white/10 rounded-2xl p-6">
+                    <h3 class="text-xl font-bold mb-2">Core Value 2</h3>
+                    <p class="text-lg">Description of core value 2.</p>
+                </div>
+                <div class="bg-[#111] border border-white/10 rounded-2xl p-6">
+                    <h3 class="text-xl font-bold mb-2">Core Value 3</h3>
+                    <p class="text-lg">Description of core value 3.</p>
+                </div>
+            </div>
+        </section>
+        <section class="mt-12 fade-in">
+            <h2 class="text-3xl font-bold mb-4">Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-[#111] border border-white/10 rounded-2xl p-6 slide-up">
+                    <h3 class="text-xl font-bold mb-2">Frs</h3>
+                    <p class="text-lg">Python</p>
+                    <a href="https://github.com/chidwilash17/Frs" class="bg-white/5 px-4 py-2 rounded-full hover:scale-[1.02] transition-all duration-300">View Code ↗</a>
+                </div>
+                <div class="bg-[#111] border border-white/10 rounded-2xl p-6 slide-up">
+                    <h3 class="text-xl font-bold mb-2">UniversityIssueManagement</h3>
+                    <p class="text-lg">None</p>
+                    <a href="https://github.com/chidwilash17/UniversityIssueManagement" class="bg-white/5 px-4 py-2 rounded-full hover:scale-[1.02] transition-all duration-300">View Code ↗</a>
+                </div>
+                <div class="bg-[#111] border border-white/10 rounded-2xl p-6 slide-up">
+                    <h3 class="text-xl font-bold mb-2">omdb-proxy</h3>
+                    <p class="text-lg">JavaScript</p>
+                    <a href="https://github.com/chidwilash17/omdb-proxy" class="bg-white/5 px-4 py-2 rounded-full hover:scale-[1.02] transition-all duration-300">View Code ↗</a>
+                </div>
+                <div class="bg-[#111] border border-white/10 rounded-2xl p-6 slide-up">
+                    <h3 class="text-xl font-bold mb-2">flutter</h3>
+                    <p class="text-lg">Dart</p>
+                    <a href="https://github.com/chidwilash17/flutter" class="bg-white/5 px-4 py-2 rounded-full hover:scale-[1.02] transition-all duration-300">View Code ↗</a>
+                </div>
+                <div class="bg-[#111] border border-white/10 rounded-2xl p-6 slide-up">
+                    <h3 class="text-xl font-bold mb-2">quantum-backend</h3>
+                    <p class="text-lg">PowerShell</p>
+                    <a href="https://github.com/chidwilash17/quantum-backend" class="bg-white/5 px-4 py-2 rounded-full hover:scale-[1.02] transition-all duration-300">View Code ↗</a>
+                </div>
+            </div>
+        </section>
+        <section class="mt-12 fade-in">
+            <h2 class="text-3xl font-bold mb-4">Stack</h2>
+            <div class="flex flex-wrap gap-4">
+                <span class="bg-white/5 px-4 py-2 rounded-full">Python</span>
+                <span class="bg-white/5 px-4 py-2 rounded-full">JavaScript</span>
+                <span class="bg-white/5 px-4 py-2 rounded-full">Dart</span>
+                <span class="bg-white/5 px-4 py-2 rounded-full">PowerShell</span>
+            </div>
+        </section>
+        <footer class="mt-12 pb-12 fade-in">
+            <h2 class="text-3xl font-bold mb-4">Connect</h2>
+            <div class="flex gap-4">
+                <button class="bg-white/5 px-4 py-2 rounded-full hover:scale-[1.02] transition-all duration-300">GitHub ↗</button>
+                <button class="bg-white/5 px-4 py-2 rounded-full hover:scale-[1.02] transition-all duration-300">LinkedIn ↗</button>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

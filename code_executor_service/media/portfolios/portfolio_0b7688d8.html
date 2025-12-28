@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chidwilash Chidwilash Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1d23;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            background: linear-gradient(135deg, #abecd6 0%, #fbed96 100%);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .hero button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .about {
+            margin-top: 50px;
+        }
+        .about h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .about p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .skills {
+            margin-top: 50px;
+        }
+        .skills h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .skills .tag {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .projects {
+            margin-top: 50px;
+        }
+        .projects h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+        .project-card {
+            background: linear-gradient(135deg, #abecd6 0%, #fbed96 100%);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .project-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .project-card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .project-card .lang {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .project-card a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .contact {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .contact button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        @media only screen and (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .project-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Chidwilash Chidwilash</h1>
+            <p>Web Developer and Designer</p>
+            <button>View Projects</button>
+            <div style="margin-top: 20px;">
+                <button><a href="https://github.com/chidwilash17" style="color: #fff; text-decoration: none;">GitHub Profile</a></button>
+                <button><a href="https://www.linkedin.com/in/dhana-sai" style="color: #fff; text-decoration: none;">Connect on LinkedIn</a></button>
+            </div>
+        </div>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>Chidwilash Chidwilash is a web developer and designer with a passion for creating innovative and user-friendly digital experiences.</p>
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Dart</span>
+            <span class="tag">PowerShell</span>
+        </div>
+        <div class="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Frs</h3>
+                    <p>None</p>
+                    <span class="lang">Python</span>
+                    <a href="https://github.com/chidwilash17/Frs">View Code</a>
+                </div>
+                <div class="project-card">
+                    <h3>UniversityIssueManagement</h3>
+                    <p>None</p>
+                    <span class="lang">None</span>
+                    <a href="https://github.com/chidwilash17/UniversityIssueManagement">View Code</a>
+                </div>
+                <div class="project-card">
+                    <h3>omdb-proxy</h3>
+                    <p>None</p>
+                    <span class="lang">JavaScript</span>
+                    <a href="https://github.com/chidwilash17/omdb-proxy">View Code</a>
+                </div>
+                <div class="project-card">
+                    <h3>flutter</h3>
+                    <p>None</p>
+                    <span class="lang">Dart</span>
+                    <a href="https://github.com/chidwilash17/flutter">View Code</a>
+                </div>
+                <div class="project-card">
+                    <h3>quantum-backend</h3>
+                    <p>None</p>
+                    <span class="lang">PowerShell</span>
+                    <a href="https://github.com/chidwilash17/quantum-backend">View Code</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <h2>Get in Touch</h2>
+            <button><a href="https://github.com/chidwilash17" style="color: #fff; text-decoration: none;">GitHub Profile</a></button>
+            <button><a href="https://www.linkedin.com/in/dhana-sai" style="color: #fff; text-decoration: none;">Connect on LinkedIn</a></button>
+        </div>
+    </div>
+</body>
+</html>

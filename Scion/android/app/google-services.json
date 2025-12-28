@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "229976114437",
+    "project_id": "pilgrimage-simulator",
+    "storage_bucket": "pilgrimage-simulator.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229976114437:android:d603e4ac9f19af849d236c",
+        "android_client_info": {
+          "package_name": "com.example.lms_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229976114437-845a01ia4f94aimu6gc7p95r5aie88ld.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAZmKKD1V-rzyELiO-nNLwFK_nRxRZt08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229976114437-845a01ia4f94aimu6gc7p95r5aie88ld.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

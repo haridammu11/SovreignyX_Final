@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #212121;
+            --secondary-color: #333;
+            --accent-color: #03A9F4;
+            --error-color: #FF0000;
+            --success-color: #00FF00;
+            --font-family: 'Inter', sans-serif;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: var(--font-family);
+            background-color: var(--primary-color);
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-group input {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+        }
+        .form-group input:focus {
+            outline: none;
+            background-color: #555;
+        }
+        .form-group input.error {
+            border: 1px solid var(--error-color);
+        }
+        .form-group input.success {
+            border: 1px solid var(--success-color);
+        }
+        .submit-btn {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--accent-color);
+            color: #fff;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #04B9F7;
+        }
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent-color);
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .error-message {
+            color: var(--error-color);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .success-message {
+            color: var(--success-color);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>REGISTRATION Page</h2>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <span class="error-message" id="username-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="email-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error-message" id="password-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                <span class="error-message" id="confirm-password-error"></span>
+            </div>
+            <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
+            <div class="loading-spinner" id="loading-spinner" style="display: none;"></div>
+            <span class="error-message" id="form-error"></span>
+            <span class="success-message" id="form-success"></span>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('registration-form');
+        const usernameInput = document.getElementById('username');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm_password');
+        const submitBtn = document.getElementById('submit-btn');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const formError = document.getElementById('form-error');
+        const formSuccess = document.getElementById('form-success');
+        const usernameError = document.getElementById('username-error');
+        const emailError = document.getElementById('email-error');
+        const passwordError = document.getElementById('password-error');
+        const confirmPasswordError = document.getElementById('confirm-password-error');
+
+        let isValid = {
+            username: false,
+            email: false,
+            password: false,
+            confirm_password: false,
+        };
+
+        usernameInput.addEventListener('input', () => {
+            if (usernameInput.value.trim() === '') {
+                usernameError.textContent = 'Username is required';
+                isValid.username = false;
+            } else {
+                usernameError.textContent = '';
+                isValid.username = true;
+            }
+        });
+
+        emailInput.addEventListener('input', () => {
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(emailInput.value)) {
+                emailError.textContent = 'Invalid email format';
+                isValid.email = false;
+            } else {
+                emailError.textContent = '';
+                isValid.email = true;
+            }
+        });
+
+        passwordInput.addEventListener('input', () => {
+            if (passwordInput.value.length < 8) {
+                passwordError.textContent = 'Password must be at least 8 characters';
+                isValid.password = false;
+            } else {
+                passwordError.textContent = '';
+                isValid.password = true;
+            }
+        });
+
+        confirmPasswordInput.addEventListener('input', () => {
+            if (confirmPasswordInput.value !== passwordInput.value) {
+                confirmPasswordError.textContent = 'Passwords do not match';
+                isValid.confirm_password = false;
+            } else {
+                confirmPasswordError.textContent = '';
+                isValid.confirm_password = true;
+            }
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (Object.values(isValid).every((value) => value)) {
+                submitBtn.disabled = true;
+                loadingSpinner.style.display = 'block';
+                const formData = new FormData(form);
+                fetch('/api/submit/', {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.success) {
+                        formSuccess.textContent = 'Registration successful!';
+                        formError.textContent = '';
+                        form.reset();
+                    } else {
+                        formError.textContent = data.error;
+                        formSuccess.textContent = '';
+                    }
+                })
+                .catch((error) => {
+                    formError.textContent = 'An error occurred';
+                    formSuccess.textContent = '';
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    loadingSpinner.style.display = 'none';
+                });
+            } else {
+                formError.textContent = 'Please fill out all fields correctly';
+            }
+        });
+    </script>
+</body>
+</html>

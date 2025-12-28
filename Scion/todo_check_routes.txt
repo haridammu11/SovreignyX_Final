@@ -1,0 +1,3 @@
+Ensure that `main.dart` in `lms_app` has the named routes defined:
+'/job-board': (context) => const JobBoardScreen(),
+'/my-applications': (context) => const MyApplicationsScreen(),

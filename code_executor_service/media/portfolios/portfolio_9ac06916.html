@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chidwilash Chidwilash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #f1c40f;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background: linear-gradient(120deg, #2c3e50, #4ca1af);
+            background-size: 400% 400%;
+            animation: bg-animation 10s ease infinite;
+        }
+        @keyframes bg-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 48px;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .hero p {
+            font-size: 24px;
+            color: var(--light-color);
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .hero .btn {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            padding: 16px 32px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .hero .btn:hover {
+            background-color: var(--secondary-color);
+        }
+        /* About Section */
+        .about {
+            padding: 64px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .about p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .about .key-strengths {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .about .key-strengths .card {
+            background-color: var(--light-color);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px;
+            width: calc(33.33% - 32px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .about .key-strengths .card:hover {
+            transform: translateY(-10px);
+        }
+        /* Experience/Skills Section */
+        .experience {
+            padding: 64px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .experience .skill-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .experience .skill-cloud .skill {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 8px 16px;
+            border-radius: 8px;
+            margin: 8px;
+            font-size: 16px;
+        }
+        /* Projects Section */
+        .projects {
+            padding: 64px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .projects .project {
+            background-color: var(--light-color);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px;
+            width: calc(33.33% - 32px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .projects .project:hover {
+            transform: translateY(-10px);
+        }
+        .projects .project .visit-repo {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .projects .project .visit-repo:hover {
+            background-color: var(--secondary-color);
+        }
+        /* Certificates Section */
+        .certificates {
+            padding: 64px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .certificates .certificate {
+            background-color: var(--light-color);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px;
+            width: calc(33.33% - 32px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .certificates .certificate:hover {
+            transform: translateY(-10px);
+        }
+        /* Contact Section */
+        .contact {
+            padding: 64px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact .social-btn {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            padding: 16px 32px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin: 16px;
+        }
+        .contact .social-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .about p {
+                font-size: 16px;
+            }
+            .experience .skill-cloud .skill {
+                font-size: 14px;
+            }
+            .projects .project {
+                width: calc(50% - 32px);
+            }
+            .certificates .certificate {
+                width: calc(50% - 32px);
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+            .hero p {
+                font-size: 14px;
+            }
+            .about p {
+                font-size: 14px;
+            }
+            .experience .skill-cloud .skill {
+                font-size: 12px;
+            }
+            .projects .project {
+                width: 100%;
+            }
+            .certificates .certificate {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Chidwilash Chidwilash</h1>
+        <p>Crafting Digital Experiences with Python & Flutter</p>
+        <button class="btn" onclick="window.location.href='#about'">View Work</button>
+        <button class="btn" onclick="window.location.href='#contact'">Contact Me</button>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <p>As a passionate developer with a background in computer science, I have always been fascinated by the endless possibilities that technology has to offer. With a strong foundation in programming languages such as Python and Dart, I have been able to craft digital experiences that are both functional and visually appealing.</p>
+        <p>My philosophy is to always strive for innovation and excellence in everything I do. I believe that the key to success lies in the ability to adapt to new technologies and trends, while always keeping the user experience at the forefront of my mind. My goal is to continue to push the boundaries of what is possible in the world of technology, and to create digital experiences that inspire and delight users.</p>
+        <div class="key-strengths">
+            <div class="card">
+                <h2>Problem Solver</h2>
+                <p>Skilled in breaking down complex problems into manageable solutions.</p>
+            </div>
+            <div class="card">
+                <h2>Full-Stack Architect</h2>
+                <p>Experienced in designing and developing scalable, efficient, and reliable software systems.</p>
+            </div>
+            <div class="card">
+                <h2>Collaborative Team Player</h2>
+                <p>Proven track record of working effectively with cross-functional teams to deliver high-quality results.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Experience/Skills Section -->
+    <section id="experience" class="experience">
+        <h2>Experience and Skills</h2>
+        <div class="skill-cloud">
+            <div class="skill">Python</div>
+            <div class="skill">Dart</div>
+            <div class="skill">Flutter</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">PowerShell</div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Frs</h3>
+            <p>A Python-based project with a focus on problem-solving and algorithmic thinking.</p>
+            <button class="visit-repo" onclick="window.location.href='https://github.com/chidwilash17/Frs'">Visit Repo</button>
+        </div>
+        <div class="project">
+            <h3>UniversityIssueManagement</h3>
+            <p>A project that utilizes Python and Dart to manage university issues and provide solutions.</p>
+            <button class="visit-repo" onclick="window.location.href='https://github.com/chidwilash17/UniversityIssueManagement'">Visit Repo</button>
+        </div>
+        <div class="project">
+            <h3>omdb-proxy</h3>
+            <p>A JavaScript-based project that creates a proxy server for the Open Movie Database API.</p>
+            <button class="visit-repo" onclick="window.location.href='https://github.com/chidwilash17/omdb-proxy'">Visit Repo</button>
+        </div>
+        <div class="project">
+            <h3>flutter</h3>
+            <p>A project that explores the capabilities of the Flutter framework for building cross-platform applications.</p>
+            <button class="visit-repo" onclick="window.location.href='https://github.com/chidwilash17/flutter'">Visit Repo</button>
+        </div>
+        <div class="project">
+            <h3>quantum-backend</h3>
+            <p>A PowerShell-based project that creates a backend API for managing quantum computing resources.</p>
+            <button class="visit-repo" onclick="window.location.href='https://github.com/chidwilash17/quantum-backend'">Visit Repo</button>
+        </div>
+    </section>
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <h2>Certificates and Achievements</h2>
+        <!-- Add certificates and achievements here -->
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <button class="social-btn" onclick="window.location.href='https://github.com/chidwilash17'"><i class="fa fa-github"></i> Follow on GitHub</button>
+        <button class="social-btn" onclick="window.location.href='https://www.linkedin.com/in/dhana-sai'"><i class="fa fa-linkedin"></i> Connect on LinkedIn</button>
+    </section>
+    <script>
+        // Add event listeners for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

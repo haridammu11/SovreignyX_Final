@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chidwilash Chidwilash Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+        }
+        .hero {
+            background-image: linear-gradient(to bottom, #3a86ff, #ff006e);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .hero button {
+            background-color: transparent;
+            border: 2px solid #fff;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .hero button:hover {
+            background-color: #fff;
+            color: #121212;
+        }
+        .about {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .about p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .skills {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skill {
+            background-color: #2f2f2f;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 0.5rem;
+        }
+        .projects {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .project {
+            background-color: #2f2f2f;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .project h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .project p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .project ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .project li {
+            font-size: 0.8rem;
+            margin-bottom: 0.2rem;
+        }
+        .project a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #3a86ff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+        }
+        .contact {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact button {
+            background-color: transparent;
+            border: 2px solid #fff;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin: 0.5rem;
+        }
+        .contact button:hover {
+            background-color: #fff;
+            color: #121212;
+        }
+        @media only screen and (max-width: 600px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+            .about {
+                padding: 1rem;
+            }
+            .skills {
+                padding: 1rem;
+            }
+            .projects {
+                padding: 1rem;
+            }
+            .contact {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Chidwilash Chidwilash</h1>
+        <p>Full Stack Developer</p>
+        <button>View Projects</button>
+        <button><a href="https://www.linkedin.com/in/dhana-sai" style="color: white; text-decoration: none;">Connect on LinkedIn</a></button>
+        <button><a href="https://github.com/chidwilash17" style="color: white; text-decoration: none;">GitHub Profile</a></button>
+    </section>
+    <section class="about">
+        <p>Chidwilash Chidwilash is a full stack developer with experience in Python, JavaScript, and Dart. He has worked on various projects, including Frs, UniversityIssueManagement, omdb-proxy, flutter, and quantum-backend.</p>
+    </section>
+    <section class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Dart</div>
+        <div class="skill">PowerShell</div>
+    </section>
+    <section class="projects">
+        <div class="project">
+            <h2>Frs</h2>
+            <p>None</p>
+            <ul>
+                <li>Lang: Python</li>
+            </ul>
+            <a href="https://github.com/chidwilash17/Frs">View Code</a>
+        </div>
+        <div class="project">
+            <h2>UniversityIssueManagement</h2>
+            <p>None</p>
+            <ul>
+                <li>Lang: None</li>
+            </ul>
+            <a href="https://github.com/chidwilash17/UniversityIssueManagement">View Code</a>
+        </div>
+        <div class="project">
+            <h2>omdb-proxy</h2>
+            <p>None</p>
+            <ul>
+                <li>Lang: JavaScript</li>
+            </ul>
+            <a href="https://github.com/chidwilash17/omdb-proxy">View Code</a>
+        </div>
+        <div class="project">
+            <h2>flutter</h2>
+            <p>None</p>
+            <ul>
+                <li>Lang: Dart</li>
+            </ul>
+            <a href="https://github.com/chidwilash17/flutter">View Code</a>
+        </div>
+        <div class="project">
+            <h2>quantum-backend</h2>
+            <p>None</p>
+            <ul>
+                <li>Lang: PowerShell</li>
+            </ul>
+            <a href="https://github.com/chidwilash17/quantum-backend">View Code</a>
+        </div>
+    </section>
+    <section class="contact">
+        <button><a href="https://www.linkedin.com/in/dhana-sai" style="color: white; text-decoration: none;">Connect on LinkedIn</a></button>
+        <button><a href="https://github.com/chidwilash17" style="color: white; text-decoration: none;">GitHub Profile</a></button>
+    </section>
+</body>
+</html>

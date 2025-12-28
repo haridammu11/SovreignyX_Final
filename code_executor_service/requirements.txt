@@ -1,0 +1,17 @@
+# Django and REST Framework
+Django>=4.2.0
+djangorestframework>=3.14.0
+
+# HTTP Requests
+requests>=2.31.0
+
+# Real-time WebSockets
+daphne>=4.0.0
+channels>=4.0.0
+channels-redis>=4.0.0
+
+# CORS
+django-cors-headers>=4.0.0
+
+# Additional utilities
+python-decouple>=3.8
