@@ -415,26 +415,42 @@ GROQ_API_KEY = 'gsk_abc123xyz...'
 [🐛 Report Issue](issues) · [💡 Request Feature](pulls)
 
 </div>
-
+<h2>Scion App</h2>
 <table>
   <tr>
     <td align="center">
-      <h3>Scion Dashboard</h3>
+      <h3>Scion Dashboard Architecture</h3>
       <img src="./dashboard_architecture_professional.png" width="500" />
     </td>
     <td align="center">
-      <h3>Course Detail Screen</h3>
+      <h3>Course Detail Screen Architecture</h3>
       <img src="course_detail_architecture_professional.png" width="500" />
     </td>
   </tr>
     <tr>
     <td align="center">
-      <h3>Scion Dashboard</h3>
-      <img src="./dashboard_architecture_professional.png" width="500" />
+      <h3>Contest Solve Architecture</h3>
+      <img src="contest_solve_architecture_professional.png" width="500" />
     </td>
     <td align="center">
-      <h3>Course Detail Screen</h3>
-      <img src="course_detail_architecture_professional.png" width="500" />
+      <h3>Web Generator Architecture</h3>
+      <img src="web_generator_architecture_professional.png" width="500" />
+    </td>
+  </tr>
+    <tr>
+    <td align="center">
+      <h3>Team Formation Architecture</h3>
+      <img src="team_formation_architecture_professional.png" width="500" />
+    </td>
+    <td align="center">
+      <h3>Profile Architecture</h3>
+      <img src="profile_architecture_professional.png" width="500" />
+    </td>
+  </tr>
+     <tr>
+    <td align="center">
+      <h3>Job Application Architecture </h3>
+      <img src="job_application_architecture_professional.png" width="500" />
     </td>
   </tr>
 </table>
