@@ -415,3 +415,5 @@ GROQ_API_KEY = 'gsk_abc123xyz...'
 [🐛 Report Issue](issues) · [💡 Request Feature](pulls)
 
 </div>
+
+<img src="dashboard_architecture_professional.png">
