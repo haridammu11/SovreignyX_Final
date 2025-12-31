@@ -446,7 +446,7 @@ GROQ_API_KEY = 'gsk_abc123xyz...'
       <img src="job_application_architecture_professional.png" width="500" />
     </td>
   </tr>
-</table>
+</table><br>
 <table>
    <u> <h2>Sovereign App Workflow</h2></u>
   <tr>
